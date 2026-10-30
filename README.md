@@ -15,3 +15,13 @@ I am a beginner learning GitHub and programming.
 - Created my first repository
 - Enabled the README file
 - Learning how to make commits# Practise
+## My AI Learning Goals
+
+- Learn Python programming
+- Understand how artificial intelligence works
+- Build my first AI-powered application
+- Learn how to publish projects using GitHub
+
+## My First AI Project
+
+I aim to build an AI career-guidance assistant that helps people explore career options based on their interests and skills.
