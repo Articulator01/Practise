@@ -3,39 +3,38 @@ name = input("What is your name? ")
 
 print("Welcome", name)
 
-print("\nChoose your career interest:")
-print("1. Technology")
-print("2. Finance")
-print("3. Healthcare")
-print("4. Agriculture")
-print("5. Education")
+careers = {
+    "1": ["Software Developer", "Data Analyst", "Cybersecurity Specialist"],
+    "2": ["Accountant", "Financial Analyst", "Auditor"],
+    "3": ["Doctor", "Nurse", "Pharmacist"],
+    "4": ["Agronomist", "Farm Manager", "Agricultural Engineer"],
+    "5": ["Teacher", "Lecturer", "Education Officer"]
+}
 
-interest = input("\nEnter your choice (1-5): ")
+choice = "yes"
 
-if interest == "1":
-    careers = ["Software Developer", "Data Analyst", "Cybersecurity Specialist"]
+while choice == "yes":
 
-elif interest == "2":
-    careers = ["Accountant", "Financial Analyst", "Auditor"]
+    print("\nChoose your career interest:")
+    print("1. Technology")
+    print("2. Finance")
+    print("3. Healthcare")
+    print("4. Agriculture")
+    print("5. Education")
 
-elif interest == "3":
-    careers = ["Doctor", "Nurse", "Pharmacist"]
+    interest = input("Enter your choice (1-5): ")
 
-elif interest == "4":
-    careers = ["Agronomist", "Farm Manager", "Agricultural Engineer"]
+    if interest in careers:
+        print("\nHello", name)
+        print("Here are some careers you can explore:")
 
-elif interest == "5":
-    careers = ["Teacher", "Lecturer", "Education Officer"]
+        for career in careers[interest]:
+            print("-", career)
 
-else:
-    careers = []
+    else:
+        print("Invalid choice. Please select 1 to 5.")
 
-if careers:
-    print("\nHello", name)
-    print("Here are some careers you can explore:")
+    choice = input("\nExplore another category? (yes/no): ").lower()
 
-    for career in careers:
-        print("-", career)
-
-else:
-    print("Invalid choice. Please select between 1 and 5.")
+print("\nThank you", name, "for exploring careers!")
+print("Goodbye!")
